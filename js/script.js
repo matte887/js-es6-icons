@@ -125,8 +125,14 @@ const icons = [
 const htmlWrapper = document.querySelector(".wrapper");
 const select = document.getElementById("filter-by");
 
+// window.onload = main;
+main();
 
-function prova () {
+select.addEventListener('change', function() {
+    main();
+});
+
+function main () {
     
     const filteredItems = icons.filter( (currentItem) => {
         const filterBy = document.getElementById("filter-by").value;
@@ -148,12 +154,11 @@ function prova () {
     console.log(filteredItems);
     
     filteredItems.forEach( (currentItem) => {
-        htmlWrapper.innerHTML += `<div class="item">
+        htmlWrapper.innerHTML += `<div class="card">
         <i class="${currentItem.family} ${currentItem.prefix}${currentItem.name}" style="color: ${currentItem.color}"></i>
         <p>${currentItem.name.toUpperCase()}</p> 
         </div>`
     });
+    
 }
 
-window.onload = prova()
-select.onchange = prova;
