@@ -155,4 +155,5 @@ function prova () {
     });
 }
 
+window.onload = prova()
 select.onchange = prova;
