@@ -8,9 +8,17 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
     <header></header>
-    <nav></nav>
+    <nav>
+        <select name="filter-by" id="filter-by" onchange="prova()">
+            <option value="all">All</option>
+            <option value="animal">Animal</option>
+            <option value="vegetable">Vegetable</option>
+            <option value="user">User</option>
+        </select>
+    </nav>
     <main>
         <div class="wrapper" id="prova">
             <!-- <div class="item">
@@ -19,6 +27,7 @@
             </div> -->
         </div>
     </main>
+
     <script src="js/script.js" type="text/javascript"></script>
 </body>
 </html>
