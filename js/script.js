@@ -123,8 +123,11 @@ const icons = [
 // Aggiungere alla pagina una select in cui le options corrispondono ai vari tipi di icone (animal, vegetable, user). Quando l'utente seleziona un tipo dalla select, visualizzare solamente le icone corrispondenti.
 
 const htmlWrapper = document.querySelector(".wrapper");
-function prova () {
+const select = document.getElementById("filter-by");
 
+
+function prova () {
+    
     const filteredItems = icons.filter( (currentItem) => {
         const filterBy = document.getElementById("filter-by").value;
         console.log(filterBy);
@@ -138,18 +141,18 @@ function prova () {
             return currentItem;
         }
     });
-
+    
     // Pulisco l'HTML per fare in modo che cambiano l'option del select non si accumulino gli item.
     htmlWrapper.innerHTML = "";
-
+    
     console.log(filteredItems);
-
+    
     filteredItems.forEach( (currentItem) => {
         htmlWrapper.innerHTML += `<div class="item">
-            <i class="${currentItem.family} ${currentItem.prefix}${currentItem.name}" style="color: ${currentItem.color}"></i>
-            <p>${currentItem.name.toUpperCase()}</p> 
+        <i class="${currentItem.family} ${currentItem.prefix}${currentItem.name}" style="color: ${currentItem.color}"></i>
+        <p>${currentItem.name.toUpperCase()}</p> 
         </div>`
     });
 }
 
-
+select.onchange = prova;
