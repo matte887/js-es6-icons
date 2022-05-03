@@ -139,11 +139,7 @@ function main () {
         console.log(filterBy);
         if (filterBy === "all") {
             return currentItem;
-        } else if (filterBy === "animal" && currentItem.type === "animal") {
-            return currentItem;
-        } else if (filterBy === "vegetable" && currentItem.type === "vegetable") {
-            return currentItem;
-        } else if (filterBy === "user" && currentItem.type === "user") {
+        } else if (filterBy === currentItem.type) {
             return currentItem;
         }
     });
