@@ -144,7 +144,7 @@ function main () {
         }
     });
     
-    // Pulisco l'HTML per fare in modo che cambiano l'option del select non si accumulino gli item.
+    // Pulisco l'HTML per fare in modo che cambiando l'option del select non si accumulino gli item.
     htmlWrapper.innerHTML = "";
     
     console.log(filteredItems);
