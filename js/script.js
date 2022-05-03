@@ -136,7 +136,6 @@ function main () {
     
     const filteredItems = icons.filter( (currentItem) => {
         const filterBy = document.getElementById("filter-by").value;
-        console.log(filterBy);
         if (filterBy === "all") {
             return currentItem;
         } else if (filterBy === currentItem.type) {
@@ -146,8 +145,6 @@ function main () {
     
     // Pulisco l'HTML per fare in modo che cambiando l'option del select non si accumulino gli item.
     htmlWrapper.innerHTML = "";
-    
-    console.log(filteredItems);
     
     filteredItems.forEach( (currentItem) => {
         htmlWrapper.innerHTML += `<div class="card">
